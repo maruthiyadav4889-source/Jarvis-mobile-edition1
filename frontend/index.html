@@ -1,31 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>J.A.R.V.I.S</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.A.R.V.I.S</title>
+    <!-- Basic styling to make it look like a terminal interface -->
+    <style>
+        body {
+            background-color: #0c1c2b; /* Dark background */
+            color: #00d9ff; /* Cyan text */
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        h1 { margin-bottom: 5px; }
+        .sub { font-size: 0.9em; opacity: 0.8; margin-top: 0; }
+        .active { color: #00ff00; font-weight: bold; margin-bottom: 30px; }
+        ul { list-style: none; padding: 0; }
+        li { margin: 10px 0; }
+        .status-on { color: #00ff00; }
+        .status-locked { color: #ff9900; }
+    </style>
 </head>
 <body>
- <header><h1>J.A.R.V.I.S</h1><p>MOBILE EDITION</p></header>
- <div class="core">
- <div class="ring r1"></div>
- <div class="ring r2"></div>
- <div class="center"></div>
- </div>
- <p class="core-text">CORE ACTIVE</p>
- <div class="status">
- <h2>SYSTEM STATUS</h2>
- <div class="row"><span>AI CORE</span><b class="on">● ONLINE</b></div>
- <div class="row"><span>NETWORK</span><b class="on">● ONLINE</b></div>
- <div class="row"><span>VOICE</span><b class="off">○ LOCKED</b></div>
- <div class="row"><span>MEMORY</span><b class="off">○ LOCKED</b></div>
- </div>
- <div class="chat" id="chat"></div>
- <div class="input-area">
- <input id="msg" placeholder="Ask J.A.R.V.I.S...">
- <button id="send">SEND</button>
- </div>
- <script src="script.js"></script>
+    <div>
+        <h1>J.A.R.V.I.S</h1>
+        <p class="sub">MOBILE EDITION</p>
+        <p class="active">CORE ACTIVE</p>
+
+        <h3>SYSTEM STATUS</h3>
+        <ul>
+            <li>AI CORE: <span class="status-on">ONLINE</span></li>
+            <li>NETWORK: <span class="status-on">ONLINE</span></li>
+            <li>VOICE: <span class="status-locked">LOCKED</span></li>
+            <li>MEMORY: <span class="status-locked">LOCKED</span></li>
+            <li>[SEND]</li>
+        </ul>
+    </div>
+
+    <!-- Ensure script.js exists in the same folder -->
+    <script src="script.js"></script>
 </body>
 </html>
+
